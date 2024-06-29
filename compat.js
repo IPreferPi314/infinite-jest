@@ -1,6 +1,6 @@
 function displCompat() {
-	var n1 = document.getElementByID("n1").value.trim();
-	var n2 = document.getElementByID("n2").value.trim();
+	var n1 = document.getElementByID("n1").value;
+	var n2 = document.getElementByID("n2").value;
 	
 	//DEBUG:
 	//n1 = "Joshua Gillis";
