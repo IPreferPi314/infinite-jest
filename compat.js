@@ -1,6 +1,6 @@
 function displCompat() {
-	var n1 = document.getElementByID("name1").value;
-	var n2 = document.getElementByID("name2").value;
+	var n1 = document.getElementByID('name1').value;
+	var n2 = document.getElementByID('name2').value;
 	
 	//DEBUG:
 	//n1 = "Joshua Gillis";
@@ -10,11 +10,11 @@ function displCompat() {
 	alert(n2);
 	
 	if (n1.length === 0 || n2.length === 0) {
-		document.getElementByID("result").innerHTML = "Please enter two names";
+		document.getElementByID('result').innerHTML = "Please enter two names";
 	} else {
 		result = calcCompat();
 		result_str = "There are " + result + " people more compatible than " + n1 + " and " + n2 + ".";
-		document.getElementByID("result").innerHTML = result_str;
+		document.getElementByID('result').innerHTML = result_str;
 		//console.log(result_str)
 	}
 }
