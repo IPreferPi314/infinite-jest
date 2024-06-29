@@ -6,6 +6,9 @@ function displCompat() {
 	//n1 = "Joshua Gillis";
 	//n2 = "Eric Coons";
 
+	alert(n1);
+	alert(n2);
+	
 	if (n1.length === 0 || n2.length === 0) {
 		document.getElementByID("result").innerHTML = "Please enter two names";
 	} else {
