@@ -1,24 +1,27 @@
 function displCompat() {
-	var n1 = document.getElementByID("n1").value.trim();
-	var n2 = document.getElementByID("n2").value.trim();
+	var n1 = document.getElementById('name1').value;
+	var n2 = document.getElementById('name2').value;
 	
 	//DEBUG:
 	//n1 = "Joshua Gillis";
 	//n2 = "Eric Coons";
 
+	//alert(n1);
+	//alert(n2);
+	
 	if (n1.length === 0 || n2.length === 0) {
-		document.getElementByID("result").innerHTML = "Please enter two names";
+		document.getElementById('result').innerHTML = "Please enter two names";
 	} else {
-		result = calcCompat();
-		result_str = "There are " + result + " people more compatible than " + n1 + " and " + n2 + ".";
-		document.getElementByID("result").innerHTML = result_str;
+		var result = calcCompat(n1,n2);
+		var result_str = "There are " + result + " people more compatible than " + n1 + " and " + n2 + ".";
+				document.getElementById('result').innerHTML = result_str;
 		//console.log(result_str)
 	}
 }
 
-function calcCompat() {
-	//var n1 = document.getElementByID("n1").value;
-	//var n2 = document.getElementByID("n2").value;
+function calcCompat(n1, n2) {
+	//var n1 = document.getElementById("n1").value;
+	//var n2 = document.getElementById("n2").value;
 
 	//DEBUG:
 	//n1 = "Joshua Gillis";
@@ -31,7 +34,7 @@ function calcCompat() {
 	vowels[3] = (n1.match(/o/gi)||[]).length + (n2.match(/o/gi)||[]).length + 4;
 	vowels[4] = (n1.match(/u/gi)||[]).length + (n2.match(/u/gi)||[]).length + 5;
 
-	result = '';
+	let result = '';
 
 	for (let i = 0; i <= 4; i++) {
 		for (let j = i + 1; j <= 4; j++) {
